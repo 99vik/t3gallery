@@ -6,7 +6,7 @@
 - [x] Scaffold basic UI with mock data
 - [x] Setup database
 - [x] Connect DB with UI
-- [ ] Setup authentication
+- [x] Setup authentication
 - [ ] Add image upload
 - [ ] Error management
 - [ ] Image routing
