@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
+import "@uploadthing/react/styles.css";
 
-import { GeistSans } from "geist/font/sans";
+import { Inter } from "next/font/google";
 import TopNav from "../components/top-nav";
 import { ClerkProvider } from "@clerk/nextjs";
 
@@ -10,6 +11,8 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: {
@@ -17,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" className={`${GeistSans.variable} dark`}>
+      <html lang="en" className={`${inter.className} dark`}>
         <body>
           <TopNav />
           {children}
