@@ -32,7 +32,7 @@ async function Images() {
 
 export default async function HomePage() {
   return (
-    <main className="">
+    <>
       <SignedOut>
         <div className="mt-8 text-center text-xl font-semibold">
           Please sing in.
@@ -41,6 +41,6 @@ export default async function HomePage() {
       <SignedIn>
         <Images />
       </SignedIn>
-    </main>
+    </>
   );
 }

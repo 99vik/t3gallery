@@ -5,7 +5,7 @@ export default function PhotoModal({
 }) {
   return (
     <div>
-      <p>this is photo modal</p>
+      <p>this is photo page</p>
       <p>id: {photoId}</p>
     </div>
   );

@@ -27,12 +27,11 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${inter.className} dark`}>
-        <body>
+        <body className="relative m-0">
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <TopNav />
-          {children}
+          <main>{children}</main>
           {modal}
-          <div id="modal-root" />
         </body>
       </html>
     </ClerkProvider>
