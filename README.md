@@ -9,7 +9,7 @@
 - [x] Setup authentication
 - [x] Add image upload
 - [x] Next image component
-- [ ] Error management
+- [x] Error management
 - [ ] Image routing
 - [ ] Delete image
 - [ ] App analytics
