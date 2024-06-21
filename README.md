@@ -10,7 +10,7 @@
 - [x] Add image upload
 - [x] Next image component
 - [x] Error management
-- [ ] Image routing
+- [x] Image routing
 - [ ] Delete image
 - [ ] App analytics
 - [ ] Ratelimiting
