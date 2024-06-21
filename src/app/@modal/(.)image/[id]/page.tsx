@@ -1,16 +1,14 @@
-import { getImage } from "~/server/queries";
+import ImageView from "~/components/image-view";
 import Modal from "./modal";
 
 export default async function PhotoModal({
-  params: { id: photoId },
+  params: { id: imageId },
 }: {
   params: { id: string };
 }) {
-  const image = await getImage(Number(photoId));
-
   return (
     <Modal>
-      <img src={image.url} alt={image.name} height={400} width={600} />
+      <ImageView imageId={imageId} />
     </Modal>
   );
 }

@@ -1,12 +1,13 @@
+import ImageView from "~/components/image-view";
+
 export default function PhotoModal({
-  params: { id: photoId },
+  params: { id: imageId },
 }: {
   params: { id: string };
 }) {
   return (
-    <div>
-      <p>this is photo page</p>
-      <p>id: {photoId}</p>
+    <div className="grid h-full w-full grid-cols-4 gap-2 p-3">
+      <ImageView imageId={imageId} />
     </div>
   );
 }

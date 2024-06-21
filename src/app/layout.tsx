@@ -27,10 +27,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={`${inter.className} dark`}>
-        <body className="relative m-0">
-          <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-          <TopNav />
-          <main>{children}</main>
+        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+        <body className="relative">
+          <div className="grid h-screen grid-rows-[auto,1fr]">
+            <TopNav />
+            <main className="overflow-y-auto">{children}</main>
+          </div>
           {modal}
         </body>
       </html>
