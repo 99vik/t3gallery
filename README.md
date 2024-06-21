@@ -11,6 +11,6 @@
 - [x] Next image component
 - [x] Error management
 - [x] Image routing
-- [ ] Delete image
-- [ ] App analytics
+- [x] Delete image
+- [x] App analytics
 - [ ] Ratelimiting
