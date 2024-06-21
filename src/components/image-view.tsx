@@ -1,9 +1,12 @@
 import { clerkClient } from "@clerk/nextjs/server";
 import Image from "next/image";
-import { getImage } from "~/server/queries";
+import { deleteImage, getImage } from "~/server/queries";
+import { Button } from "./ui/button";
 
 export default async function ImageView({ imageId }: { imageId: string }) {
-  const image = await getImage(Number(imageId));
+  const idAsNumber = Number(imageId);
+
+  const image = await getImage(idAsNumber);
 
   const userInfo = await clerkClient.users.getUser(image.userId);
 
@@ -21,6 +24,15 @@ export default async function ImageView({ imageId }: { imageId: string }) {
         <p className="border-b pb-2 text-center font-semibold">{image.name}</p>
         <p>Uploaded by: {userInfo.fullName}</p>
         <p>Created on: {image.createdAt.toLocaleDateString()}</p>
+        <form
+          action={async () => {
+            "use server";
+
+            await deleteImage(idAsNumber);
+          }}
+        >
+          <Button variant="destructive">Delete</Button>
+        </form>
       </div>
     </>
   );
