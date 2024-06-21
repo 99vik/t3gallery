@@ -3,6 +3,7 @@
 T3 stack tutorial, where I have built a basic gallery app where you upload images. Purpose of this app was to test some new tools and external providers.
 
 Stack: Typescript, Next.js 14, Drizzle, Tailwind
+
 External providers: Vercel, Uploadthing, Clerk, Sentry, Posthog, Upstash
 
 ## TODO
