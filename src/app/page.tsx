@@ -18,7 +18,7 @@ async function Images() {
                 src={image.url}
                 className="w-80 object-cover object-center"
                 fill
-                sizes="33vw"
+                sizes="10vw"
                 alt={image.name}
               />
             </div>
